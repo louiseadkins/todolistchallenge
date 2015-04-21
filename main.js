@@ -1,4 +1,7 @@
 $('button').click(function(){
-  var item = $('input[name="todo"]').val();
-	alert(item)
-	});
+
+  var newListItem = $('input[name="todo"]').val();
+  $newListItem = $('<li>').text('NEWWW');
+  $('<li>').text('NEWWW').prependTo('#theList');
+
+	  });

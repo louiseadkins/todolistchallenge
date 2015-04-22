@@ -1,7 +1,12 @@
-$('button').click(function(){
+$('button').click(function(event){
 
-  var newListItem = $('input[name="todo"]').val();
-  $newListItem = $('<li>').text('NEWWW');
-  $('<li>').text('NEWWW').prependTo('#theList');
+  var $task = $('input[name="todo"]').val();
+  var $chk = $('<input/>').attr({ type: 'checkbox' }).addClass("completeItem");
+  $newListItem = $('<li>').text($task).prepend($chk).addClass('highlight');
 
-	  });
+  $('#theList').prepend($newListItem);
+
+
+	 event.preventDefault();
+  $newListItem.removeClass('highlight', 1000);
+  });
